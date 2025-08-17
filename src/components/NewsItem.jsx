@@ -1,7 +1,6 @@
 import React from "react";
 
 const NewsItem = ({ article }) => {
-  // Format tanggal agar lebih mudah dibaca
   const formattedDate = new Date(article.publishedAt).toLocaleString("id-ID", {
     dateStyle: "medium",
     timeStyle: "short",
@@ -19,8 +18,8 @@ const NewsItem = ({ article }) => {
           {article.title}
         </a>
       </h3>
-      <div className="text-sm text-gray-500 flex justify-between items-center">
-        <span>{article.source.name}</span>
+      <div className="text-sm text-deep-jungle flex justify-between items-center">
+        <span>{article.sourceName}</span>
         <span>{formattedDate}</span>
       </div>
     </div>
