@@ -13,12 +13,12 @@ const NewsItem = ({ article }) => {
           href={article.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
+          className="text-navy-blue hover:underline"
         >
           {article.title}
         </a>
       </h3>
-      <div className="text-sm text-deep-jungle flex justify-between items-center">
+      <div className="text-sm text-rich-black flex justify-between items-center">
         <span>{article.sourceName}</span>
         <span>{formattedDate}</span>
       </div>

@@ -107,7 +107,7 @@ function App() {
   const renderContent = () => {
     if (loading)
       return (
-        <p className="text-center text-gray-500">
+        <p className="text-center text-rich-black">
           Memuat berita dari berbagai sumber...
         </p>
       );
@@ -115,7 +115,7 @@ function App() {
       return <p className="text-center text-red-500">Error: {error}</p>;
     if (filteredArticles.length === 0)
       return (
-        <p className="text-center text-black">
+        <p className="text-center text-rich-black">
           Tidak ada berita yang cocok dengan pencarian Anda.
         </p>
       );
@@ -123,14 +123,16 @@ function App() {
   };
 
   return (
-    <div className="bg-light-olive min-h-screen font-sans">
+    <div className="bg-gray-100 min-h-screen font-sans">
       <Navbar />
       <main className="container mx-auto p-4">
         <SearchBar
           searchQuery={searchQuery}
           onSearchChange={handleSearchChange}
         />
-        <h2 className="text-xl font-bold text-black mb-4">AI News Today</h2>
+        <h2 className="text-xl font-bold text-rich-black mb-4">
+          AI News Today
+        </h2>
         {renderContent()}
       </main>
     </div>
